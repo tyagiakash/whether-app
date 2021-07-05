@@ -37,13 +37,14 @@ searchBtn.addEventListener("click", (e) => {
         error.style.display = "block";
         return;
       }
-      loading.style.display = "none";
-      whetherContainer.style.display = "block";
+      
       temperature.textContent = Math.floor(data.main.temp - kelvin) + "°C";
       summary.textContent = data.weather[0].description;
       loc.textContent = data.name + "," + data.sys.country;
       let icon1 = data.weather[0].icon;
       icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${icon1}@2x.png" style= 'height:10rem'/>`;
+      loading.style.display = "none";
+      whetherContainer.style.display = "block";
     })
     .catch((err) => {
       loading.style.display = "none";
