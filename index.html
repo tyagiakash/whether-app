@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="heading">Whether App</h1>
+      <div class="form-container">
+        <form>
+          <input
+            type="search"
+            id="search"
+            placeholder="Search City, Zipcode..."
+          />
+          <button id="search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <div class="icon"></div>
+        <div class="temp">°C</div>
+        <div class="summary"></div>
+        <div class="location"></div>
+      </div>
+      <div class="loading">
+        <img src="assets/loading.gif" width="200" />
+      </div>
+      <div class="error"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
