@@ -34,7 +34,8 @@ searchBtn.addEventListener("click", (e) => {
     .then((data) => {
       if (data.cod === "404") {
         error.innerHTML = data.message;
-        error.style.display = "none";
+        error.style.display = "block";
+        loading.style.display = "none";
         return;
       }
 
