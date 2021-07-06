@@ -34,10 +34,10 @@ searchBtn.addEventListener("click", (e) => {
     .then((data) => {
       if (data.cod === "404") {
         error.innerHTML = data.message;
-        error.style.display = "block";
+        error.style.display = "none";
         return;
       }
-      
+
       temperature.textContent = Math.floor(data.main.temp - kelvin) + "°C";
       summary.textContent = data.weather[0].description;
       loc.textContent = data.name + "," + data.sys.country;
